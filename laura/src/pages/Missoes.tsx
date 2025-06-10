@@ -136,8 +136,8 @@ const Missoes = () => {
   }
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, mt: 4 }}>
-     
-     
+
+
 
 
       <Title>Dicas</Title>
@@ -165,9 +165,9 @@ const Missoes = () => {
             <LinearProgress color='error' variant="determinate" value={progresso[idx]} sx={{ my: 2, height: 10, borderRadius: 5 }} />
             <Button onClick={() => handleVerMissao(idx)}>Ver Missão</Button>
             {progresso[idx] < 100 ? (
-              <Button 
-              sx={{ mt: 1 }}
-              variant="contained" color="primary" onClick={() => handleResponderMissao(idx)}>
+              <Button
+                sx={{ mt: 1 }}
+                variant="contained" color="primary" onClick={() => handleResponderMissao(idx)}>
                 Responder Missão
               </Button>
             ) : (
@@ -313,9 +313,22 @@ const Missoes = () => {
       </Modal>
 
       {finalCompleta && (
-        <Typography variant="h5" color="success.main" sx={{ mt: 4 }}>
-          Parabéns! Você concluiu todas as missões!
-        </Typography>
+        <>
+          <Typography variant="h5" color="success.main" sx={{ mt: 4 }}>
+            Parabéns! Você concluiu todas as missões!
+          </Typography>
+          <Button
+            sx={{ mt: 1 }}
+            variant="outlined"
+            color="success"
+            component="a"
+            href="/recompensa/recompensaFinal.txt"
+            download
+          >
+            Recompensa Final
+          </Button>
+        </>
+
       )}
     </Box>
   )
