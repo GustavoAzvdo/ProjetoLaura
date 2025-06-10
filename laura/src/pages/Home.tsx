@@ -1,5 +1,4 @@
 import { Box, Container } from '@mui/material'
-import React from 'react'
 import Title from '../components/Title/Title'
 import Dicas from '../components/Dicas/Dicas'
 import Personagens from '../components/Personagens/Personagens'
