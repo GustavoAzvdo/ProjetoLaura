@@ -44,13 +44,13 @@ const Dicas = () => {
                     <Typography variant="body1" sx={{ mb: 3 , fontSize: 20}}>
                         Oi vida,
                         <br />
-                        preparei uma surpresa pra você: um joguinho, como se fosse um quiz especial só nosso. 💖
+                        preparei uma surpresa pra você: um joguinho, como se fosse um quiz com assuntos diversos! 💘
                         Nele, você vai responder 5 perguntas sobre a gente — coisas que vivemos, queremos, ou sonhamos juntos. Cada pergunta é única, com temas diferentes, desde lembranças até vontades que temos como casal.
                         <br />
-                        Mas calma, não vai ser tão fácil assim... 😏 Você vai ter a ajuda de 3 personagens, cada um com um tipo de dica diferente — então pense bem antes de usar! Use com sabedoria, porque cada ajuda pode ser decisiva.
+                        Mas calma, não vai ser tão fácil assim... 😏 Você vai ter a ajuda de 3 personagens, cada um com um tipo de dica diferente — então pense bem antes de usar! Use com sabedoria, porque só podem usar-lás apenas UMA VEZ (NÃO RECARREGUE A PAGINA).
                         <br />
                         E quando chegar na última... é a pergunta final. A mais importante. A que fecha tudo. Boa sorte, meu amor. 💌
-                        Tô torcendo por você.
+                        Tô torcendo por você, eu te amo moça!
                         <br />
                         <strong>G</strong>
                     </Typography>
