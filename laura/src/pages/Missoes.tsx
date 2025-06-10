@@ -41,11 +41,11 @@ const respostas = [
 const dicas = [
   { imagem: hp, nome: "Harry Potter", conteudo: "'Meu pai não era um herói para todo mundo... mas ele sempre esteve com os amigos dele'" },
   { imagem: amora, nome: "Amora", conteudo: "Vai arrumar briga com a Belinha, eu to sossegada comendo chocolate e não saio daqui" },
-  { imagem: gustavo, nome: "Gustavo", conteudo: "Conteúdo da dica 3" }
+  { imagem: gustavo, nome: "Gustavo", conteudo: "O Gustavo trabalha com esse mundo, porem eles não voam pelo espaço" }
 ]
 
-const perguntaFinal = 'Pergunta da missão final?'
-const respostaFinal = 'respostaFinal'
+const perguntaFinal = '"O que nós comemos no nosso primeiro encontro no Buenos?"'
+const respostaFinal = 'Picanha'
 
 const Missoes = () => {
   // Estado para controlar se cada dica já foi usada
@@ -165,11 +165,14 @@ const Missoes = () => {
             <LinearProgress color='error' variant="determinate" value={progresso[idx]} sx={{ my: 2, height: 10, borderRadius: 5 }} />
             <Button onClick={() => handleVerMissao(idx)}>Ver Missão</Button>
             {progresso[idx] < 100 ? (
-              <Button variant="contained" color="primary" onClick={() => handleResponderMissao(idx)}>
+              <Button 
+              sx={{ mt: 1 }}
+              variant="contained" color="primary" onClick={() => handleResponderMissao(idx)}>
                 Responder Missão
               </Button>
             ) : (
               <Button
+                sx={{ mt: 1 }}
                 variant="outlined"
                 color="success"
                 component="a"
