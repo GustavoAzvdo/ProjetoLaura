@@ -1,5 +1,5 @@
 import { Box, Button, LinearProgress, Paper, Typography, Modal, TextField } from '@mui/material'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Title from '../components/Title/Title'
 import Personagem from '../components/Personagens/Personagem'
 import hp from '../assets/hp.png'
@@ -48,6 +48,8 @@ const perguntaFinal = '"O que nós comemos no nosso primeiro encontro no Buenos?
 const respostaFinal = 'Picanha'
 
 const Missoes = () => {
+
+  
   // Estado para controlar se cada dica já foi usada
   const [dicasUsadas, setDicasUsadas] = useState([false, false, false])
   const [modalDicaOpen, setModalDicaOpen] = useState(false)
@@ -134,6 +136,11 @@ const Missoes = () => {
     setModalDicaOpen(false)
     setDicaAtual(null)
   }
+
+  useEffect(() => {
+    document.title = 'Missões'
+  })
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, mt: 4 }}>
 
@@ -191,7 +198,7 @@ const Missoes = () => {
         <Box sx={{ mt: 4 }}>
           <Paper sx={{ p: 3, width: 400, textAlign: 'center', border: '2px solid #990000' }}>
             <Typography variant="h6" color="error" sx={{ fontWeight: 'bold' }}>Missão Final</Typography>
-            <LinearProgress variant="determinate" value={finalCompleta ? 100 : 0} sx={{ my: 2, height: 10, borderRadius: 5 }} />
+            <LinearProgress color='error' variant="determinate" value={finalCompleta ? 100 : 0} sx={{ my: 2, height: 10, borderRadius: 5 }} />
             <Button onClick={() => setModalPerguntaFinalOpen(true)}>Ver Missão Final</Button>
             {!finalCompleta && (
               <Button variant="contained" color="error" onClick={() => setModalRespostaFinalOpen(true)} sx={{ ml: 2 }}>
@@ -251,6 +258,7 @@ const Missoes = () => {
             {modalRespostaIdx !== null ? title[modalRespostaIdx] : ''}
           </Typography>
           <TextField
+            color='error'
             label="Sua resposta"
             value={inputResposta}
             onChange={e => setInputResposta(e.target.value)}
@@ -295,6 +303,7 @@ const Missoes = () => {
             {perguntaFinal}
           </Typography>
           <TextField
+            color='error'
             label="Sua resposta"
             value={inputRespostaFinal}
             onChange={e => setInputRespostaFinal(e.target.value)}

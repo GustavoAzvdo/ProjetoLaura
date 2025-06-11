@@ -1,8 +1,13 @@
 import { Box, Container } from '@mui/material'
+import { useEffect } from 'react'
 import Title from '../components/Title/Title'
 import Dicas from '../components/Dicas/Dicas'
 import Personagens from '../components/Personagens/Personagens'
 const Home = () => {
+
+    useEffect(() => {
+        document.title = 'Home'
+    })
     return (
         <Container
             sx={{

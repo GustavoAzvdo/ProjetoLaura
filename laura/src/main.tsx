@@ -52,11 +52,11 @@ const theme = createTheme({
         root: {
 
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#990000',
+            borderColor: '#990000 !important',
             borderWidth: 2,
           },
-          '& .MuiInputBase-input::placeholder': {
-            color: '#990000',
+          '&.Mui-focused .MuiInputBase-input::placeholder': {
+            color: '#990000 !important',
             opacity: 1, // garante que o placeholder fique visível
           },
         },
