@@ -49,7 +49,7 @@ const respostaFinal = 'Picanha'
 
 const Missoes = () => {
 
-  
+
   // Estado para controlar se cada dica já foi usada
   const [dicasUsadas, setDicasUsadas] = useState([false, false, false])
   const [modalDicaOpen, setModalDicaOpen] = useState(false)
@@ -150,9 +150,28 @@ const Missoes = () => {
       <Title>Dicas</Title>
 
       {/* Dicas */}
-      <Box sx={{ display: 'flex', gap: 3, mt: 2 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 5,
+          mt: 2,
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
+
+        }}
+      >
         {dicas.map((dica, idx) => (
-          <span key={idx} style={{ opacity: dicasUsadas[idx] ? 0.5 : 1, pointerEvents: dicasUsadas[idx] ? 'none' : 'auto' }}>
+          <span
+            key={idx}
+            style={{
+              opacity: dicasUsadas[idx] ? 0.5 : 1,
+              pointerEvents: dicasUsadas[idx] ? 'none' : 'auto',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             <Personagem
               imagem={dica.imagem}
               nome={dica.nome}
@@ -164,7 +183,16 @@ const Missoes = () => {
 
       {/* Missões */}
       <Title>Missoes</Title>
-      <Box sx={{ display: 'flex', gap: 2 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 2,
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+        }}
+      >
 
         {niveis.map((nivel, idx) => (
           <Paper key={nivel} sx={{ p: 2, width: 170, textAlign: 'center', border: '2px solid #990000' }}>
@@ -211,11 +239,24 @@ const Missoes = () => {
 
       {/* Modal Ver Missão */}
       <Modal open={modalPerguntaOpen} onClose={() => setModalPerguntaOpen(false)}>
-        <Box sx={{
-          position: 'absolute', top: '50%', left: '50%',
-          transform: 'translate(-50%, -50%)', bgcolor: 'background.paper',
-          borderRadius: 2, boxShadow: 24, p: 4, minWidth: 300, outline: 'none'
-        }}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            borderRadius: 2,
+            boxShadow: 24,
+            p: 4,
+            minWidth: 300,
+            maxWidth: '90vw',
+            maxHeight: '80vh',
+            outline: 'none',
+            overflowY: 'auto',
+            wordBreak: 'break-word',
+          }}
+        >
           <Typography variant="h5" sx={{ mb: 2 }}>
             {modalPerguntaIdx !== null ? title[modalPerguntaIdx] : ''}
           </Typography>

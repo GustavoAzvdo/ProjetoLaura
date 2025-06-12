@@ -35,13 +35,17 @@ const Dicas = () => {
                         boxShadow: 24,
                         p: 4,
                         minWidth: 300,
-                        outline: 'none'
+                        maxWidth: '90vw',
+                        maxHeight: '80vh',
+                        outline: 'none',
+                        overflowY: 'auto',
+                        wordBreak: 'break-word',
                     }}
                 >
                     <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         Como o jogo funciona?
                     </Typography>
-                    <Typography variant="body1" sx={{ mb: 3 , fontSize: 20}}>
+                    <Typography variant="body1" sx={{ mb: 3, fontSize: 20 }}>
                         Oi vida,
                         <br />
                         preparei uma surpresa pra você: um joguinho, como se fosse um quiz com assuntos diversos! 💘
